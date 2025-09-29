@@ -6,6 +6,14 @@
 .amplify-button--primary {
   background-color: #0e0e0e !important;
 }
+.amplify-tabs__item--active {
+  color:#0e0e0e !important;
+  border-color: #0e0e0e !important;
+}
+
+:root {
+  --amplify-components-tabs-item-active-border-color:  #0e0e0e;
+}
 
 /* styles/globals.css もしくは該当コンポーネントのCSS */
 @keyframes liner-progress {

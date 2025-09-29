@@ -17,13 +17,14 @@ const AuthAmplify: React.FC<Props> = ({ socialProviders, children }) => {
   return (
     <Authenticator
       socialProviders={socialProviders}
+      hideSignUp
       components={{
         Header: () => (
           <div className="mb-5 mt-10 flex justify-center text-3xl text-aws-font-color-light">
             <img src="/images/logo.jpg" alt="Logo"/>
             <br/>
-            {t('app.name')}
           </div>
+          <br/>
         ),
       }}>
       <>{cloneElement(children as ReactElement, { signOut })}</>
