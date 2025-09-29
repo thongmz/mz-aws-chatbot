@@ -1,7 +1,7 @@
 import React, { ReactNode, cloneElement, ReactElement } from 'react';
 import { BaseProps } from '../@types/common';
 import { Authenticator } from '@aws-amplify/ui-react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { SocialProvider } from '../@types/auth';
 
@@ -11,13 +11,12 @@ type Props = BaseProps & {
 };
 
 const AuthAmplify: React.FC<Props> = ({ socialProviders, children }) => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const { signOut } = useAuthenticator();
 
   return (
     <Authenticator
       socialProviders={socialProviders}
-      hideSignUp
       components={{
         Header: () => (
           <div className="mb-5 mt-10 flex justify-center text-3xl text-aws-font-color-light">
